@@ -6,14 +6,14 @@ import datetime
 
 video_capture = cv2.VideoCapture(0) #Captures the video as an input
 
-bibash=face_recognition.load_image_file("data/bibash.jpg")
-bibash_encodings = face_recognition.face_encodings(bibash)
+first_person=face_recognition.load_image_file("")
+first_person_encodings = face_recognition.face_encodings(first_person)
 
-satyam = face_recognition.load_image_file("data/satyam.jpg")
-satyam_encodings = face_recognition.face_encodings(satyam)
+second_person= face_recognition.load_image_file("")
+second_person_encodings = face_recognition.face_encodings(second_person)
 
-known_face_encodings = [bibash_encodings[0], satyam_encodings[0]]
-known_face_names = ["Bibash","Satyam"]
+known_face_encodings = [first_person_encodings[0], second_person_encodings[0]]
+known_face_names = [""] #Enter the names of the people of which data were given
 
 attend=known_face_names.copy()
 
